@@ -12,11 +12,12 @@ const Launches = ({ launches: {launches, loading, error}, getLaunches}) => {
     }, [])
     
     if(loading || launches === null) {
-        return <h3>Loading.....</h3>
+        return <h3 className='page-title'>Loading.....</h3>
     }
 
     return (
         <Fragment>
+            <h2 className='page-title'>Launch's Info</h2>
             {launches.map(launch =>
                 <LaunchesItem key={launch.flight_number} launch={launch} />     
             )}

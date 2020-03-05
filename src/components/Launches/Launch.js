@@ -17,21 +17,21 @@ const Launch = (props) => {
     }, []);
 
     if(loading || launch === null) {
-        return <h4>Loading....</h4>
+        return <h4 className='page-title'>Loading....</h4>
     }
     else {
         console.log(launch);
     }
     
     return (
-        <div>
-            <p>Flight Number: {launch.flight_number}</p>
-            <p>Mission Name: {launch.mission_name}</p>
-            <p>Launch Year: {launch.launch_year}</p>
+        <div style={{margin: 90}}>
+            <p className='company-info'>Flight Number: <span style={{fontWeight: 200}}>{launch.flight_number}</span></p>
+            <p className='company-info'>Mission Name: <span style={{fontWeight: 200}}>{launch.mission_name}</span></p>
+            <p className='company-info'>Launch Year: <span style={{fontWeight: 200}}>{launch.launch_year}</span></p>
             
-            <h4>Launch Site</h4>
-                <p>Site ID: {launch.launch_site.site_id}</p>
-                <p>Site Name: {launch.launch_site.site_name_long}</p>
+            <h4 className='company-title' style={{marginTop: 50}}>Launch Site</h4>
+                <p className='company-info'>Site ID: <span style={{fontWeight: 200}}>{launch.launch_site.site_id}</span></p>
+                <p className='company-info'>Site Name: <span style={{fontWeight: 200}}>{launch.launch_site.site_name_long}</span></p>
         </div>
     )
 }

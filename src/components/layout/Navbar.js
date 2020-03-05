@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary px-5">
+        <nav className="navbar navbar-expand-lg navbar-light px-5" style={{backgroundColor: '#FFFFFF'}}>
         <a className="navbar-brand" href="#!">SpaceX</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
 
         <div className="collapse navbar-collapse mx-5" id="navbarColor01">
-            <ul className="navbar-nav mr-auto">
+            <ul className="navbar-nav mr-auto mx-x5">
             <li className="nav-item active mx-2">
                 <Link to='/' className="nav-link">Home <span className="sr-only">(current)</span></Link>
             </li>

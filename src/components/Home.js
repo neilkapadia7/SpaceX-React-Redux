@@ -11,13 +11,14 @@ const Home = ({company: {info, loading}, getInfo}) => {
     }, []);
 
     if(loading || info === null) {
-        return <h1>Loading....</h1>
+        return <h1 className='page-title'>Loading....</h1>
     }
 
     const {name, founder, founded, employees, vehicles, launch_sites, test_sites, ceo, links : {website, twitter}, headquarters : {address, city, state} } = info;
 
     return (
         <div className='container my-5'>
+            <h2 className='page-title'>Company Info</h2>
             <p className='company-info'>Name: <span style={{fontWeight: 200}}>{name}</span></p>
             <p className='company-info'>Founder: <span style={{fontWeight: 200}}>{founder}</span></p>
             <p className='company-info'>Founded: <span style={{fontWeight: 200}}>{founded}</span></p>
@@ -27,12 +28,12 @@ const Home = ({company: {info, loading}, getInfo}) => {
             <p className='company-info'>Test Sites: <span style={{fontWeight: 200}}>{test_sites}</span></p>
             <p className='company-info'>CEO: <span style={{fontWeight: 200}}>{ceo}</span></p>
 
-            <h4>Links</h4>
+            <h4 className='company-title'>Links</h4>
             <p className='company-info'>Website: <span style={{fontWeight: 200}}>{website}</span></p>
             <p className='company-info'>Twitter: <span style={{fontWeight: 200}}>{twitter}</span></p>
 
-            <h4>HeadQuarters</h4>
-    <p className='company-info'>Address: <span style={{fontWeight: 200}}>{address}, {city}, {state}</span></p>
+            <h4 className='company-title'>HeadQuarters</h4>
+            <p className='company-info'>Address: <span style={{fontWeight: 200}}>{address}, {city}, {state}</span></p>
             
         </div>
     )

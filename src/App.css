@@ -1,6 +1,40 @@
+.page-title{
+  font-size: 45px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  color: #6DF0C2;
+  text-align: center;
+  margin-bottom: 30px;
+}
 .company-info{
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
-  color: #000;
+  color: #ffffff;
+  background-color: rgb(19, 27, 53);
+  padding: 10px;
+}
+.company-info:hover {
+  background-color: rgb(45, 49, 66);
+}
+.company-title {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #6DF0C2;
+}
+.launch-button{
+  text-decoration: none;
+  color: rgb(105, 31, 201);
+  padding: 12px 25px;
+  border: 1px solid rgb(138, 80, 214);
+  margin-top: 40px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+.launch-button:hover {
+  text-decoration: none;
+  background-color: rgb(105, 31, 201);
+  color: #ffffff;
+  
 }

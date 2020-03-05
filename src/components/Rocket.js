@@ -12,11 +12,12 @@ const Rocket = ({rocket: {rockets, loading, error}, getRockets}) => {
     }, []);
 
     if(loading || rockets === null){
-        return <h4>Loading...</h4>
+        return <h4 className='page-title'>Loading...</h4>
     }
 
     return (
-        <div>
+        <div style={{margin: 90}}>
+            <h2 className='page-title'>Rocket Info</h2>
             {rockets.map(rocket =>
                 <RocketItem key={rocket.id} rocket={rocket} />    
             )}

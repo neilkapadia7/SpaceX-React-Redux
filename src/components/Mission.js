@@ -13,11 +13,12 @@ const Mission = ({mission: {missions, loading, error},getMissions}) => {
     }, []);
 
     if(loading || missions === null){
-        return <h4>Loading...</h4>
+        return <h4 className='page-title'>Loading...</h4>
     } 
 
     return (
-        <div>
+        <div style={{margin: 90}}>
+            <h2 className='page-title'>Mission Info</h2>
             {missions.map(mission =>
                 <MissionItem key={mission.mission_id} mission={mission} />    
             )}

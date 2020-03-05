@@ -5,13 +5,14 @@ const MissionItem = ({mission}) => {
     const {mission_name,mission_id,manufacturers, payload_ids, website, description} = mission;
 
     return (    
-        <div>
-            <p>Mission Name: {mission_name}</p>
-            <p>Mission ID: {mission_id}</p>
-            <p>Manufasturers: {manufacturers.map(man =>  man, )} </p>
-            <p>Payload IDS: {payload_ids.map(pay => pay,  )} </p>
-            <p>Website: {website}</p>
-            <p>Description {description}</p>
+        <div style={{marginTop: 90}}>
+            <h2 className='company-title'>Mission:</h2>
+            <p className='company-info'>Mission Name: <span style={{fontWeight: 200}}>{mission_name}</span></p>
+            <p className='company-info'>Mission ID: <span style={{fontWeight: 200}}>{mission_id}</span></p>
+            <p className='company-info'>Manufasturers: <span style={{fontWeight: 200}}>{manufacturers.map(man =>  man, )}</span> </p>
+            <p className='company-info'>Payload IDS: <span style={{fontWeight: 200}}>{payload_ids.map(pay => pay,  )} </span> </p>
+            <p className='company-info'>Website: <span style={{fontWeight: 200}}>{website}</span></p>
+            <p className='company-info'>Description <span style={{fontWeight: 200}}>{description}</span></p>
         </div>
     )
 }
